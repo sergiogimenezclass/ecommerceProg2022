@@ -16,8 +16,16 @@ let recolectar_datos = function () {
     ]
 
 console.log(producto)
+    localStorage.setItem('miProducto', JSON.stringify(producto))
 
 
 }
 
 recolectar_datos()
+
+let probamosLocalStorage = function() {
+    localStorage.setItem('precio',document.querySelector('.act-price').innerText)
+    localStorage.setItem('nombre',document.querySelector('#nombre').innerText)
+    localStorage.setItem('descuento',document.querySelector('.dis-price').innerText)
+    
+}
