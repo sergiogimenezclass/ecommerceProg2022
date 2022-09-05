@@ -9,6 +9,7 @@ let recolectar_datos = function () {
     producto.precio_lista = document.querySelector('.dis-price').innerText
     producto.nombre = document.querySelector('#nombre').innerText
     producto.cantidad = 0
+    producto.descripcion = document.querySelector('.about').innerText
     producto.talle = document.querySelector('input[type=radio]:checked').value
     producto.fotos = ['https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw7a39f4bf/products/DG_DUOJEU010B/DG_DUOJEU010B-3.JPG',
         'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwf6158278/products/DG_DUOJEU010B/DG_DUOJEU010B-2.JPG',
