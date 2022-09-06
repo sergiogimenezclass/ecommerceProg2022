@@ -16,17 +16,39 @@ let recolectar_datos = function () {
         'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwf6158278/products/DG_DUOJEU010B/DG_DUOJEU010B-1.JPG'
     ]
 
-console.log(producto)
-    localStorage.setItem('miProducto', JSON.stringify(producto))
+    console.log(producto)
 
+
+    let listado = []
+
+    if (localStorage.getItem('miProducto')) {
+        listado = JSON.parse(localStorage.getItem('miProducto'))
+        console.log('Tomamos lo que este en local storage y lo ponemos en el array: ')
+        console.log(listado)
+    }
+
+    if (localStorage.getItem('miProducto')) {
+        // esta definido en localStorage. Ya tiene productos
+        console.log('Agregamos un producto')
+        listado.push(producto)
+        localStorage.setItem('miProducto', JSON.stringify(listado))
+    } else {
+        // No esta definido en el localStorage. No tiene productos
+        console.log('Creamos el item en el local Storage y agregamos producto')
+        listado.push(producto)
+        localStorage.setItem('miProducto', JSON.stringify(listado))
+    }
+
+    console.log('-----------------------')
+    console.log(listado)
 
 }
 
 recolectar_datos()
 
-let probamosLocalStorage = function() {
-    localStorage.setItem('precio',document.querySelector('.act-price').innerText)
-    localStorage.setItem('nombre',document.querySelector('#nombre').innerText)
-    localStorage.setItem('descuento',document.querySelector('.dis-price').innerText)
-    
+let probamosLocalStorage = function () {
+    localStorage.setItem('precio', document.querySelector('.act-price').innerText)
+    localStorage.setItem('nombre', document.querySelector('#nombre').innerText)
+    localStorage.setItem('descuento', document.querySelector('.dis-price').innerText)
+
 }
