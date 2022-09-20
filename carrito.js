@@ -56,5 +56,9 @@ let recuperarData = function () {
     dibujarHtmlConProductos()
 }
 
+let borrarCarrito = function() {
+    localStorage.clear()
+}
+
 recuperarData()
 
