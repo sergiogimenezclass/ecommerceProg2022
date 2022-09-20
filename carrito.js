@@ -52,9 +52,7 @@ let recuperarData = function () {
     console.log(producto.nombre)
 
 
-    document.querySelector('.item-name').innerText = producto.nombre
-    document.querySelector('.item-desc').innerText = producto.descripcion
-    document.querySelector('.item-price').innerText = producto.precio_lista
+    
     dibujarHtmlConProductos()
 }
 

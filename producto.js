@@ -44,7 +44,7 @@ let recolectar_datos = function () {
 
 }
 
-recolectar_datos()
+// recolectar_datos()
 
 let probamosLocalStorage = function () {
     localStorage.setItem('precio', document.querySelector('.act-price').innerText)
