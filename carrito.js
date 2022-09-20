@@ -2,8 +2,10 @@ let dibujarHtmlConProductos = function () {
     console.log('Te voy a mostrar los productos en el carrito')
     let listado = JSON.parse(localStorage.getItem('miProducto'))
     console.log(listado)
+    console.log('La cantidad de producto es: ' + listado.length)
+    document.querySelector('#cartCant').innerText = listado.length
     console.log(typeof listado)
-    let listadoHtml = listado.map((producto) => `
+    let listadoHtml = listado.map((producto) => /*html*/`
         
         <div class="card mb-3 item">
             <div class="card-body">
@@ -58,6 +60,10 @@ let recuperarData = function () {
 
 let borrarCarrito = function() {
     localStorage.clear()
+}
+
+let cantidadItems = function() {
+
 }
 
 recuperarData()
