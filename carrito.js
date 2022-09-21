@@ -8,6 +8,8 @@ let dibujarHtmlConProductos = function () {
     let listadoHtml = listado.map((producto) => /*html*/`
         ${subtotal += producto.precio_descuento * producto.cantidad}
         ${console.log('el subtotal es: ' + subtotal)}
+        ${document.querySelector('.subtotal').innerHTML = subtotal}
+        
         <div class="card mb-3 item">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -38,6 +40,8 @@ let dibujarHtmlConProductos = function () {
 
     `).join('')
     document.querySelector('.cart-items').innerHTML = listadoHtml
+    document.querySelector('.total').innerHTML = parseFloat(document.querySelector('.shipping').innerHTML) + subtotal
+    document.querySelector('#total_checkout').innerHTML = parseFloat(document.querySelector('.shipping').innerHTML) + subtotal
 }
 
 let recuperarData = function () {
