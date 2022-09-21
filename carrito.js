@@ -4,8 +4,10 @@ let dibujarHtmlConProductos = function () {
     console.log(listado)
     document.querySelector('#cartCant').innerHTML = listado.length
     console.log(typeof listado)
+    let subtotal = 0
     let listadoHtml = listado.map((producto) => /*html*/`
-        
+        ${subtotal += producto.precio_descuento * producto.cantidad}
+        ${console.log('el subtotal es: ' + subtotal)}
         <div class="card mb-3 item">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -58,7 +60,7 @@ let recuperarData = function () {
 }
 
 let borrarCarrito = function() {
-    localStorage.setItem('miProducto','')
+    localStorage.setItem('miProducto','[]')
 }
 
 let cantidadItems = function() {
