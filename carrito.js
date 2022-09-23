@@ -5,11 +5,7 @@ let dibujarHtmlConProductos = function () {
     document.querySelector('#cartCant').innerHTML = listado.length
     console.log(typeof listado)
     let subtotal = 0
-    let listadoHtml = listado.map((producto) => /*html*/`
-        ${subtotal += producto.precio_descuento * producto.cantidad}
-        ${console.log('el subtotal es: ' + subtotal)}
-        ${document.querySelector('.subtotal').innerHTML = subtotal}
-        
+    let listadoHtml = listado.map((producto) => /*html*/` 
         <div class="card mb-3 item">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -40,8 +36,19 @@ let dibujarHtmlConProductos = function () {
 
     `).join('')
     document.querySelector('.cart-items').innerHTML = listadoHtml
+    calculos(listado)
+}
+
+let calculos = function(listado){
+    let subtotal = 0
+    listado.forEach(element => {
+        subtotal += element.precio_descuento * element.cantidad    
+    });  
+    // console.log('el subtotal es: ' + subtotal)
+    document.querySelector('.subtotal').innerHTML = subtotal
     document.querySelector('.total').innerHTML = parseFloat(document.querySelector('.shipping').innerHTML) + subtotal
     document.querySelector('#total_checkout').innerHTML = parseFloat(document.querySelector('.shipping').innerHTML) + subtotal
+
 }
 
 let recuperarData = function () {
