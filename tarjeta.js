@@ -12,11 +12,15 @@ let almacenaDatos = function(){
 
 
 let recuperaDatos = function(){
-
+    let tarjeta =JSON.parse(localStorage.getItem('tarjeta'))
 }
 
 let validar = function(){
 
+}
+
+let actualizarDatos = function() {
+    // Verificar si necesitamos esta funcion, sino borrarla
 }
 
 let comprar = function() {
