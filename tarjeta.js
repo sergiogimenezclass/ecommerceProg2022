@@ -16,7 +16,15 @@ let recuperaDatos = function(){
 }
 
 let validar = function(){
-
+    console.log('Estamos validando los datos de la tarjeta')
+    let respuesta
+    let condition = "verificar"
+    if (condition == "verificar") {
+        respuesta = true
+    } else {
+        respuesta = false
+    }
+    return respuesta
 }
 
 let actualizarDatos = function() {
@@ -24,7 +32,16 @@ let actualizarDatos = function() {
 }
 
 let comprar = function() {
+    console.log('Estamos comprobando si se aprueba o no la compra')
     // RESPUESTAS
     // Sï, te dejo comprar
     // No, no está autorizado
+    let condition = "chequear"
+    let respuesta
+    if (condition == "chequearYYY") {
+        respuesta = true
+    }else{
+        respuesta = false
+    }
+    return respuesta
 }

@@ -78,7 +78,22 @@ let cantidadItems = function() {
 
 }
 
-
+let checkout = function() {
+    almacenaDatos()
+    if (validar() == true) {
+        // Si me lo valida, entonces que me deje avanzar a la compra
+        if (comprar() == true) {
+            console.log('Felicitaciones, compra realizada')
+        }else{
+            console.log('El banco rechazó el pago')
+        }
+            
+    }else{
+        console.log('Los datos de la tarjeta son incorrectos')
+    }
+    
+    
+}
 
 recuperarData()
 
